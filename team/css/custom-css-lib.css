@@ -1,0 +1,93 @@
+ul .dropdown-divider {
+	padding: 0px !important;
+}
+.dropdown-menu {
+	padding-top: 0px !important;
+}
+.dropdown-menu a{
+	width: 100% !important;
+	padding: 5px !important;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block !important;
+	border: none !important;
+}
+
+/*END*/
+
+.pseudo_border {
+    position: relative;
+    display: inline-block;
+}
+
+.pseudo_border:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 10px auto;
+    width: 50%;
+    height: 4px;
+    background: #000000;
+}
+
+.hr-for-home hr {
+    border: none;
+    border-left: 3px solid #000000;
+    height: 100vh;
+    width: 1px;
+}
+
+.style-three {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.style-three:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.custom-preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999999;
+    background-color: rgba(255, 255, 255, 1);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon/preloader.gif);
+}
+
+.padding-0 {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    font-weight: 200 !important;
+}
+
+.team-grid-icons {
+    display: block !important;
+    padding-bottom: 10px !important;
+}
+
+.custom-logo-size {
+    min-height: auto;
+    /*min-height: 110px !important;*/
+}
+
+#inputFile:hover {
+    cursor: pointer !important;
+}

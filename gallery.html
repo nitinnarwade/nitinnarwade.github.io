@@ -1,0 +1,568 @@
+<?php //include("includes/config.php");?>
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="NEUcrest-ITN">
+		<meta name="author" content="Nitin Narwade">
+		<meta name="keywords" content="neucrest, neucrest-itn">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>NEUcrest | Gallery</title>
+		<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+		<!-- Css Styles -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+		<link rel="stylesheet" href="css/flaticon.css" type="text/css">
+		<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+		<link rel="stylesheet" href="css/nice-select.css" type="text/css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+		<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+		<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/custom-css-lib.css" type="text/css">
+	</head>
+	<!--https://alt-web.com/TUTORIALS/?id=bootstrap_modal_carousel_gallery-->
+	<body>
+		<div class="modal fade bd-example-modal-lg" id="myModal">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 style="justify-content:center;" class="text-uppercase" id="headerForModel"></h5>
+						<button type="button" class="close text-danger" data-dismiss="modal" title="Close"><i class="fa fa-times"></i></button>
+					</div>
+					<div class="modal-body">
+						<div id="myGallery" class="carousel slide" data-interval="false">
+							<img id="zommImageId">
+						</div>
+					</div>
+					<!--
+					<div class="modal-footer">
+						<button class="btn-sm close" type="button" data-dismiss="modal">Close</button>
+					</div>-->
+				</div>
+			</div>
+		</div>
+		<!-- Page Preloder -->
+		<div id="preloder">
+			<div class="loader"></div>
+		</div>
+		<!-- Offcanvas Menu Section Begin -->
+		<div class="offcanvas-menu-overlay"></div>
+		<div class="canvas-open">
+			<i class="icon_menu"></i>
+		</div>
+		<div class="offcanvas-menu-wrapper">
+			<div class="canvas-close">
+				<i class="icon_close"></i>
+			</div>
+			<!--<div class="search-icon  search-switch">
+				<i class="icon_search"></i>
+				</div>-->
+			<div class="header-configure-area">
+				<!--<div class="language-option">
+					<img src="img/flag.jpg" alt="">
+					<span>EN <i class="fa fa-angle-down"></i></span>
+					<div class="flag-dropdown">
+					    <ul>
+					        <li><a href="#">Zi</a></li>
+					        <li><a href="#">Fr</a></li>
+					    </ul>
+					</div>
+					</div>-->
+			</div>
+			<nav class="mainmenu mobile-menu">
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="about">About</a></li>
+					<li><a href="team">Team</a></li>
+					<li><a href="partners">Partners</a></li>
+					<li><a href="events">Events</a></li>
+					<li class="active"><a href="gallery">Gallery</a></li>
+					<li><a href="publication">Publications</a></li>
+					<li><a href="news">News</a></li>
+					<li class="active"><a href="communication">Communication</a></li>
+					<li><a href="contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div id="mobile-menu-wrap"></div>
+			<div class="top-social">
+				<a target="_blank" href="https://www.facebook.com/neucrest"><i class="fa fa-facebook"></i></a>
+				<a target="_blank" href="https://twitter.com/INeucrest?s=20"><i class="fa fa-twitter"></i></a>
+				<!--<a href="#"><i class="fa fa-instagram"></i></a>-->
+				<a target="_blank" href="https://www.linkedin.com/in/neucrest/"><i class="fa fa-linkedin"></i></a>
+			</div>
+			<ul class="top-widget">
+				<li><i class="fa fa-phone"></i> (+33) 169867131</li>
+				<li><i class="fa fa-envelope"></i> neucrest<span style='font-family: Segoe UI'><b>@</b></span>gmail.com
+				</li>
+				<!--<li><i class="fa fa-address-card"></i> Grant N. 860635</li>-->
+			</ul>
+		</div>
+		<!-- Offcanvas Menu Section End -->
+		<!-- Header Section Begin -->
+		<header class="header-section">
+			<div class="top-nav">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<ul class="tn-left">
+								<li><i class="fa fa-phone"></i> (+33) 169867131</li>
+								<li><i class="fa fa-envelope"></i> neucrest<span
+									style='font-family: Segoe UI'><b>@</b></span>gmail.com</li>
+								<!--<li><i class="fa fa-address-card"></i> Grant N. 860635</li>-->
+							</ul>
+						</div>
+						<div class="col-lg-6">
+							<div class="tn-right">
+								<div class="top-social">
+									<a target="_blank" href="https://www.facebook.com/neucrest"><i
+										class="fa fa-facebook"></i></a>
+									<a target="_blank" href="https://twitter.com/INeucrest?s=20"><i
+										class="fa fa-twitter"></i></a>
+									<!--<a href="#"><i class="fa fa-instagram"></i></a>-->
+									<a target="_blank" href="https://www.linkedin.com/in/neucrest/"><i
+										class="fa fa-linkedin"></i></a>
+								</div>
+								<!--<div class="language-option">
+									<img src="img/flag.jpg" alt="">
+									<span>EN <i class="fa fa-angle-down"></i></span>
+									<div class="flag-dropdown">
+									    <ul>
+									        <li><a href="#">Zi</a></li>
+									        <li><a href="#">Fr</a></li>
+									    </ul>
+									</div>
+									</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2">
+							<div class="logo">
+								<a href="index">
+								<img src="img/logo.png" alt="NEUcrest-ITN">
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-10">
+							<div class="nav-menu">
+								<nav class="mainmenu">
+									<ul>
+										<li><a href="index">HOME</a></li>
+										<li>
+											<a href="#">ORGANIZATION <i class="fa fa-chevron-down"></i></a>
+											<ul class="dropdown border">
+												<li class="active"><a href="about">ABOUT US</a></li>
+												<div class="dropdown-divider"></div>
+												<li><a href="team">TEAM</a></li>
+												<div class="dropdown-divider"></div>
+												<li><a href="partners">PARTNERS</a></li>
+												<!--<div class="dropdown-divider"></div>
+													<li><a href="#">CONTACT US</a></li>-->
+											</ul>
+										</li>
+										<li><a href="events">EVENTS CALENDAR</a></li>
+										<li>
+											<a href="#">RESOURCES <i class="fa fa-chevron-down"></i></a>
+											<ul class="dropdown border">
+												<li><a href="gallery">GALLERY</a></li>
+												<div class="dropdown-divider"></div>
+												<li><a href="publication">PUBLICATIONS</a></li>
+												<div class="dropdown-divider"></div>
+												<li><a href="news">NEWS</a></li>
+												<div class="dropdown-divider"></div>
+												<li><a href="communication">COMMUNICATION</a></li>
+											</ul>
+										</li>
+										<li><a href="contact">CONTACT US</a></li>
+									</ul>
+								</nav>
+								<!--<div class="nav-right search-switch">
+									<i class="icon_search"></i>
+									</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section">
+			<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-12 col-sm-12 col-xl-12">
+					<div class="d-flex justify-content-center" style="padding-bottom: 50px;">
+						<h3 class="pseudo_border">GALLERY</h3>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			<div class="row" style="padding-bottom: 10px;">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button type="button" onclick = "changeView('video-gallery')" class="btn btn-outline-secondary btn-lg  btn-block mr-3">TAKE ME TO THE VIDEO GALLERY</button>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+					<button type="button" onclick = "changeView('image-gallery')" class="btn btn-outline-warning  btn-block btn-lg">TAKE ME TO THE IMAGE GALLERY</button>
+				</div>
+			</div>
+			<hr/>
+			<div id="video-gallery">
+				<div class="row py-3">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_IC.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_IC.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 1 / Coordinator: Institut Curie (FR)</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_KCL.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_KCL.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 2: King’s College of London (United Kingdom) </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_UEA.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_UEA.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 3: University of East Anglia, United Kingdom</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_NUIG.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_NUIG.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 4: National University of Ireland Galway (Ireland)</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_UMH2.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_UMH2.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 5: Universidad Miguel Hernandez de elche, Spain</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_EMC.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_EMC.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 6: Erasmus Universitair Medisch, Netherlands</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_MUW.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_MUW.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 7: Medizinische Universität Wien, Austria</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_TAU.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_TAU.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 8: Tel Aviv University, Israel</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de table_Stemcell.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de table_Stemcell.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 9: Stemcell Technologies Uk Ltd, United Kingdom</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_Azelead.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_Azelead.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 10: Azelead, France</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<div class="card h-100 shadow text-center">
+							<div class="embed-responsive embed-responsive-16by9">
+								<video onload="injectJS()" controls="true" class="embed-responsive-item">
+									<source src="partners/videos/Tour de Table_Imagine.mp4" type="video/mp4" />
+								</video>
+								<!--<iframe onload="injectJS()" class="embed-responsive-item" src="partners/videos/Tour de Table_Imagine.mp4" allowfullscreen></iframe>-->
+							</div>
+							<div class="card-body" style="justify-content:center;">
+								<p class="card-text">Partner 11: Institut Imagine, France</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="image-gallery" style="display: none !important;">
+				<div class="row py-3" style="justify-content:center;">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/Kickoff-meeting-in-Orsay-Nov-2019.jpg', 'Kickoff Meetingin Orsay, Nov. 2019')" data-slide-to="0"><img style="height: 150px;" class="img-fluid" src="img/gallery/Kickoff-meeting-in-Orsay-Nov-2019.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT1-group-picture-Oct-2020.jpg', 'First Network Meeting, Group Picture, Oct. 2020')" data-slide-to="1"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT1-group-picture-Oct-2020.jpg"></a>
+						</div>
+					</div>					
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Norwich-July-2021_group-picture.jpg', 'Second Network Meeting, Norwich, July 2021, Group Picture')" data-slide-to="2"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Norwich-July-2021_group-picture.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Orgemont-July-2021_1.jpg', 'Second Network Meeting, Orgemont, July 2021')" data-slide-to="3"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Orgemont-July-2021_1.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Orgemont-July-2021_2.jpg', 'Second Network Meeting, Orgemont, July 2021')" data-slide-to="4"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Orgemont-July-2021_2.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Orgemont-July-2021_3.jpg', 'Second Network Meeting, Orgemont, July 2021')" data-slide-to="5"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Orgemont-July-2021_3.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Orgemont-July-2021_4.jpg', 'Second Network Meeting, Orgemont, July 2021')" data-slide-to="6"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Orgemont-July-2021_4.jpg"></a>
+						</div>
+					</div>					
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Orgemont-July-2021_5.jpg', 'Second Network Meeting, Orgemont, July 2021')" data-slide-to="7"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Orgemont-July-2021_5.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT2-Orgemont-July-2021_group_picture.jpg', 'Second Network Meeting Group Picture, Orgemont, July 2021')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT2-Orgemont-July-2021_group_picture.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC1.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="9"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC1.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC2.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="9"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC2.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC3.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="9"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC3.jpg"></a>
+						</div>
+					</div>		
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC4.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC4.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC5.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="9"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC5.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC6.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="9"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC6.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/EXRC7.jpg', 'Gene Jamboree Workshop, EXRC Portsmouth, September 2021')" data-slide-to="9"><img style="height: 150px;" class="img-fluid" src="img/gallery/EXRC7.jpg"></a>
+						</div>
+					</div>		
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/PI-Meeting-Alicante-March-2022_3.jpg', 'NEUcrest PI meeting at CSIC-UMH, Alicante')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/PI-Meeting-Alicante-March-2022_3.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/PI-Meeting-Alicante-March-2022_2.jpg', 'NEUcrest PI meeting at CSIC-UMH, Alicante')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/PI-Meeting-Alicante-March-2022_2.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/PI-Meeting-Alicante-March-2022_1.jpg', 'NEUcrest PI meeting at CSIC-UMH, Alicante.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/PI-Meeting-Alicante-March-2022_1.jpg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_1.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_1.jpeg"></a>
+						</div>
+					</div>									
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_2.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_2.jpeg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_3.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_3.jpeg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_4.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_4.jpeg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_5.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_5.jpeg"></a>
+						</div>
+					</div>									
+				</div>
+				<div class="row py-3">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_6.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_6.jpeg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_7.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_7.jpeg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_8.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_8.jpeg"></a>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+						<div class="card h-100 shadow text-center" data-toggle="modal" data-target="#myModal">
+							<a class="btn" onclick="loadImage('img/gallery/NT3_Galway_9.jpeg', 'Third Network Meeting, Galway, July 2022.')" data-slide-to="8"><img style="height: 150px;" class="img-fluid" src="img/gallery/NT3_Galway_9.jpeg"></a>
+						</div>
+					</div>									
+				</div>
+			</div>
+		</section>
+		<!-- Js Plugins -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.nice-select.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.slicknav.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/main.js"></script>
+		<!--<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<script src="js/common.js"></script>
+		<script>
+			function injectJS() {
+			     var frame = $('video');
+			     var contents = frame.contents();
+			     var body = contents.find('body').attr("oncontextmenu", "return false");
+			     //var body = contents.find('body').append('<div></div>');
+			}
+			function changeView(id) {
+				if(id == "video-gallery"){
+					$("#image-gallery").hide();
+					$("#video-gallery").show();
+				} else {
+					$("#video-gallery").hide();
+					$("#image-gallery").show();
+				}
+			}
+			
+			$(".hero-section").on("contextmenu",function(){
+				return false;
+			});
+			function loadImage(imageSource, heading) {
+				$("#zommImageId").attr("src", imageSource);
+				$("#headerForModel").html("<b>" + heading + "</b>");
+			}
+		</script>
+		<?php include("includes/footer.php"); ?>
+	</body>
+</html>
